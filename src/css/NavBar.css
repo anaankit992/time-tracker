@@ -1,0 +1,54 @@
+
+
+.main-nav {
+    background: #F3F3F4;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,.15);
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav ul li {
+    float: left;
+}
+
+.brand-logo img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.brand-logo {
+    margin-top: 12.5px;
+    padding: 1px;
+}
+
+ul .team-name {
+    margin-top: 12.5px;
+    margin-left: 30px;
+    font-weight: 600;
+    border: 1px solid #9b9b9b;
+    color: #676a6c;
+    border-radius: 3px;
+    padding: 3px 10px 3px 10px;
+    cursor: pointer;
+
+}
+
+.main-nav li:last-child {
+    position: absolute;
+    right: 30px;
+    background: #CFCFCF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 7px;
+    line-height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+}
