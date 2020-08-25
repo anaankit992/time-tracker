@@ -1,0 +1,146 @@
+body{
+    font-family: "open sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #676a6c;
+    background-color: #f3f3f4;
+    overflow-x: hidden;
+}
+body,html,body #main{
+    height: 100%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.white-bg {
+    background-color: #fff;
+}
+.wrapper{
+    overflow-y: hidden;
+    width: 100%;
+    overflow-x: hidden;
+}
+main{
+    padding: 0 15px;
+}
+.heading_container{
+    border-top: 0;
+    padding: 0 10px 20px 10px;
+}
+.heading_container h2{
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+.team_name{
+    columns: #676a6c;
+    font-weight: 600;
+}
+.section_container{
+    padding: 20px 10px 40px;
+    background-color: #f3f3f4;
+}
+.section_heading{
+    height: 50px;
+    border-color: #e7eaec;
+    background-color: #fff;
+    border-width: 4px 0 0;
+    border-style: solid solid none;
+    padding: 8px 15px 7px;
+}
+.toggle_btn{
+    display: flex;
+    justify-content: flex-end;
+    float: left;
+}
+h5{
+    display: inline-block;
+    font-size: 1.41em;
+    text-overflow: ellipsis;
+    margin: 0px 0px 7px;
+    padding: 0px;
+}
+.section_main{
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+    padding: 20px 0 20px;
+}
+.section_row div{
+    padding: 0;
+}
+.display_area{
+    margin: 20px 15px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+ }
+ .section-body{
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+ }
+.inputType{
+    width: 60%;
+    display: inline-block;
+}
+.section_main label{
+    min-width: 120px;
+    display: inline-block;
+    margin: 10px 0;
+}
+.section_main label{
+    display: inline-block;
+    margin: 20px 0 5px 0;
+}
+.btn1, .btn1:hover{
+    min-width: 80px;
+    height: 30px;
+    border: 1px solid #b8b8b8;
+    color: inherit;
+    background: #fff;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    line-height: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0;
+}
+.fa-users{
+    margin-right: 10px;
+}
+.btn-primary{
+    background-color: #ff7a21;
+    border-color: #ff7a21;
+    margin: 10px 20px 20px;
+}
+.nav-date-link{
+    ont-size: 30px;
+    color: #686b6d;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0;
+}
+a{
+    color: #424b62;
+}
+.table-timesheet {
+    text-align: center;
+    margin-top: 20px;
+}
