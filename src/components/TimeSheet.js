@@ -2,18 +2,18 @@ import React from 'react';
 
 function TimeSheet() {
     return (<div id="main" className="wrapper">
-        <main className="col-sm-9 right">
+        <main className="col-sm-10 right no_padding">
             <div className="row heading_container white-bg">
                 <div className="col-xs-12">
-                    <h2>Timesheet</h2>
+                    <h2 class="head2">Timesheet</h2>
                     <div><span className="team_name">Team name</span> / <span className="user_name">Employee name</span></div>
                 </div>
             </div>
             <div className="section_container timesheet white-bg">
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-12 no_padding">
                         <div className="section_heading white-bg">
-                            <h5 className="col-md-4 left">
+                            <h5 className="head5 col-md-4 left">
                                 <span className="fa fa-users m-r-sm"></span><span className="name">Person's</span> <span className="cycle">Daily</span> Timesheet</h5>
                             <div className="toggle_btn col-md-8">
                                 <div className="" role="group">
@@ -50,11 +50,15 @@ function TimeSheet() {
                                         <input className="form-control inputType" id="data"></input>
                                     </div>
                                 </div>
+                                <button className="btn btn-primary btn-large">
+                                    <i className="fa fa-check-square-o" aria-hidden="true"></i> Add
+                                </button>
+                                
                                 <div className="clear"></div>
                             </div>
                             <div className=" display_area col-md-10">
                                 <div className="section-body">
-                                    <h5 className="card-title">Daily Work Hours</h5>
+                                    <h5 className="head5 card-title">Daily Work Hours</h5>
                                     <table className="table table-striped">
                                         <thead className="font-bold">
                                             <tr>
@@ -137,7 +141,7 @@ function TimeSheet() {
                             <div>
                                 <button className="btn btn-primary btn-large">
                                     <i className="fa fa-check-square-o" aria-hidden="true"></i> Submit
-                    </button>
+                                </button>
                             </div>
                         </div>
                     </div>

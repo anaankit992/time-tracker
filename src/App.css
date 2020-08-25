@@ -12,4 +12,7 @@ body{
     font-size: 13px;
     overflow-x: hidden;
 }
-
+body, html,
+body #main {
+  height: 100%;
+} 
