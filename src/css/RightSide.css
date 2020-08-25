@@ -1,17 +1,69 @@
 .right-side {
+  background-color: #f3f3f4;
   width: 100%;
-  text-align: left;
+  height: 100%;
   padding-left: 220px;
   padding-top: 80px;
-  padding-bottom: 50px;
-  background-color:#F3F3F4;
+  padding-bottom: 20px;
 }
 
-.activites-section {
-  height: 295px;
-  width: 500px;
-  background: #ffffff;
+.col {
+  padding: 0;
+}
+
+.row {
+  padding: 0;
+}
+
+.activity-card {
+  min-height: 300px;
+  width: 55%;
   float: left;
+  background: #ffff;
+}
+
+.chart-card {
+  width: 39%;
+  min-height: 300px;
+  display: inline-block;
+  margin-left: 25px;
+  background: #ffff;
+}
+
+text{
+  color: #c7c7c7;
+  font-weight: lighter;
+  font-size: 11px;
+}
+
+.chart-card .body{
+  padding: 0px !important;
+}
+
+.action-card {
+  width: 100%;
+  margin-top: 30px;
+  width: 97%;
+  min-height: 300px;
+  background: #ffff;
+}
+
+.notification-card {
+  width: 83%;
+  margin-left: 3px;
+  background: #ffff;
+}
+
+.notification-body {
+  text-align: left;
+  color: #c7c7c7;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 5px 10px 10px 20px;
+}
+
+.notification-text {
+  margin-top: 10px;
 }
 
 .right-side .heading {
@@ -20,8 +72,7 @@
   border-width: 4px 0 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
-
-.right-side h5 {
+.right-side .heading h5 {
   font-size: 14px;
   text-overflow: ellipsis;
   padding: 12px 0px 8px 10px;
@@ -44,41 +95,7 @@
   margin-top: 10px;
 }
 
-.chart-section {
-  height: 295px;
-  width: 358px;
-  background: #ffffff;
-  float: left;
-  margin-left: 30px;
-}
-
-.notification-section {
-  float: left;
-  margin-left: 30px;
-  height: 100%;
-  width: 250px;
-  background: #ffffff;
-}
-
-.notification-body {
-  text-align: left;
-  color: #c7c7c7;
-  font-size: 13px;
-}
-
 .notification-text {
+  font-weight: normal;
   text-align: left;
-  padding:10px
-}
-
-
-.action-section {
-  float: none;
-  min-height: 345px;
-  width: 890px;
-  background: #ffffff;
-  margin-top:40px;
-  overflow: auto;
-  position: relative;
-  top:20px;
 }

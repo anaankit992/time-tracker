@@ -5,16 +5,16 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Home from './containers/Home';
+import history from './utils/history';
 
 function App() {
   return (
-    <Router>
+    <Router >
       <Switch>
         <Route path="/">
-          <Home />
+          <Home  history={history} />
         </Route>
       </Switch>
     </Router>

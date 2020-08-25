@@ -3,6 +3,7 @@
 @import "./css/NavBar.css";
 @import "./css/LeftSidebar.css";
 @import "./css/RightSide.css";
+@import "./css/TimeSheet.css";
 
 body{
     color: #676a6c;
@@ -11,3 +12,4 @@ body{
     font-size: 13px;
     overflow-x: hidden;
 }
+

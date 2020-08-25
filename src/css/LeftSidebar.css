@@ -6,7 +6,7 @@
   position: fixed;
   overflow-x: hidden;
   /* top: 0; */
-  top:0;
+  top: 0;
   left: 0;
   border-color: #2f4050;
 }
@@ -17,7 +17,12 @@
   left: 0px;
   margin: 0;
   padding: 10px 0 0 0;
-  margin-top:50px;
+  margin-top: 50px;
+}
+
+.left-side .active {
+  background: #5e697f;
+  color: white !important;
 }
 
 .left-side ul li {
@@ -26,6 +31,7 @@
   font-size: 14px;
   font-weight: 300;
   cursor: pointer;
+
 }
 
 .left-side ul i {
@@ -42,6 +48,7 @@
 }
 
 .left-side li:hover {
-  background: #5E697F;
+  background: #5e697f;
   color: white !important;
+  cursor: pointer;
 }
