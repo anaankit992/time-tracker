@@ -1,35 +1,24 @@
-
 .left {
   float: left;
 }
-.right {
-  float: right;
-}
-.clear {
-  clear: both;
-}
-
-.font-bold td {
-  width: 12.5%;
-}
-
 .white-bg {
   background-color: #fff;
 }
-.wrapper {
+.timesheet-wrapper {
   overflow-y: hidden;
   width: 100%;
   overflow-x: hidden;
 }
 main {
   padding: 0 15px;
+  margin-left: 220px;
 }
-.no_padding{
-    padding:0;
+.no_padding {
+  padding: 0;
 }
 .heading_container {
-    border-top: 0;
-    padding: 60px 0px 20px 22px;
+  border-top: 0;
+  padding: 60px 0px 20px 22px;
 }
 .heading_container .head2 {
   font-size: 24px;
@@ -42,16 +31,15 @@ main {
   font-weight: 600;
 }
 .section_container {
-  padding: 20px 0px 40px;
-  background-color: #424b62;
+  padding: 100px 0px 100px;
 }
 .section_heading {
-    height: 52px;
-    border-color: #e7eaec;
-    background-color: #fff;
-    border-width: 4px 0 0;
-    border-style: solid solid none;
-    padding: 8px 15px 7px;
+  height: 52px;
+  border-color: #e7eaec;
+  /* background-color: #fff; */
+  border-width: 4px 0 0;
+  border-style: solid solid none;
+  padding: 8px 15px 7px;
 }
 .toggle_btn {
   display: flex;
@@ -59,11 +47,9 @@ main {
   float: left;
 }
 h5.head5 {
-  display: inline-block;
-  font-size: 1.41em;
+  font-size: 14px;
   text-overflow: ellipsis;
-  margin: 0px 0px 7px;
-  padding: 0px;
+  padding: 12px 0px 8px 10px;
 }
 .section_main {
   border-color: #e7eaec;
@@ -76,16 +62,7 @@ h5.head5 {
   padding: 0;
 }
 .display_area {
-  margin: 20px 15px;
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
+  margin: 50px 0 0 18px;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
@@ -113,7 +90,7 @@ h5.head5 {
   height: 30px;
   border: 1px solid #b8b8b8;
   color: inherit;
-  background: #fff;
+  /* background: #fff; */
   padding: 5px 10px;
   font-size: 0.85em;
   line-height: 1.5em;
@@ -125,7 +102,9 @@ h5.head5 {
 .fa-users {
   margin-right: 10px;
 }
-.btn-primary, .btn-primary:hover, .btn-primary:focus  {
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
   background-color: #ff7a21;
   border-color: #ff7a21;
   margin: 10px 20px 20px;
@@ -137,10 +116,22 @@ h5.head5 {
   margin-right: 5px;
   padding: 0;
 }
-a {
-  color: #424b62;
+
+.timesheet-wrapper .form-control {
+  color: #686b6d;
+  font-size: 13px;
+  font-weight: normal;
 }
-.table-timesheet {
-  text-align: center;
-  margin-top: 20px;
+
+.timesheet-wrapper .table-headings {
+  color: #686b6d;
+  font-weight: 500;
+  font-size: 13px;
 }
+
+.timesheet-wrapper tbody {
+  color: #686b6d;
+  font-size: 13px;
+}
+
+

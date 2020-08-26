@@ -1,138 +1,75 @@
 import React from 'react';
+import SelectInput from '../common/SelectInput';
+
+
+const selectOptions = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
+];
 
 function TimeSheet() {
-    return (<div id="main" className="wrapper">
-        <main className="col-sm-10 right no_padding">
-            <div className="row heading_container white-bg">
-                <div className="col-xs-12">
-                    <h2 class="head2">Timesheet</h2>
-                    <div><span className="team_name">Team name</span> / <span className="user_name">Employee name</span></div>
-                </div>
-            </div>
-            <div className="section_container timesheet white-bg">
+    return (<div id="main" className="timesheet-wrapper">
+        <main className="col-sm-10 no_padding">
+            <div className="section_container timesheet">
                 <div className="row">
-                    <div className="col-md-12 no_padding">
-                        <div className="section_heading white-bg">
-                            <h5 className="head5 col-md-4 left">
-                                <span className="fa fa-users m-r-sm"></span><span className="name">Person's</span> <span className="cycle">Daily</span> Timesheet</h5>
-                            <div className="toggle_btn col-md-8">
-                                <div className="" role="group">
-                                    <button type="button" className="btn btn1 btn-secondary active">Daily</button>
-                                    <button type="button" className="btn btn1 btn-secondary">Weekly</button>
-                                    <button type="button" className="btn btn1 btn-secondary">Monthy</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="col-md-11 no_padding">
+                            <TimeHeader />
                         <div className="section_main white-bg">
                             <div className="col-md-12">
                                 <div className="section_row">
                                     <div className="col-sm-5 left">
-                                        <label for="task">Select the Task</label>
-                                        <select className="form-control inputType" id="task">
-                                            <option>Default select</option>
-                                        </select>
+                                        <label for="data">Select Date </label>
+                                        <input type="date" className="form-control inputType" id="data"></input>
                                     </div>
                                     <div className="col-sm-5 left">
-                                        <label for="task">Task Type</label>
-                                        <select className="form-control inputType" id="task">
-                                            <option>Default select</option>
-                                        </select>
+                                        <label for="task">Select the Task</label>
+                                        <SelectInput options={selectOptions} handleChange={e => { console.log(e) }} />
                                     </div>
+
                                 </div>
-                                <div className="clear"></div>
                                 <div className="section_row">
                                     <div className="col-sm-5 left">
-                                        <label for="data">Enter Date </label>
-                                        <input className="form-control inputType" id="data"></input>
+                                        <label for="task">Task Type</label>
+                                        <SelectInput options={selectOptions} handleChange={e => { console.log(e) }} />
                                     </div>
                                     <div className="col-sm-5 left">
-                                        <label for="data">Enter Time </label>
-                                        <input className="form-control inputType" id="data"></input>
+                                        <label for="data">No of Hrs </label>
+                                        <input type="number" min="0:00" max="12:00" className="form-control inputType" id="data"></input>
                                     </div>
                                 </div>
                                 <button className="btn btn-primary btn-large">
                                     <i className="fa fa-check-square-o" aria-hidden="true"></i> Add
                                 </button>
-                                
-                                <div className="clear"></div>
+
                             </div>
-                            <div className=" display_area col-md-10">
+                            <div className="display_area col-md-10">
                                 <div className="section-body">
-                                    <h5 className="head5 card-title">Daily Work Hours</h5>
+                                    <h5 className="head5 card-title">Entries</h5>
                                     <table className="table table-striped">
-                                        <thead className="font-bold">
-                                            <tr>
-
-                                                <td>Sr</td>
-
-                                                <td>Tue</td>
-
-                                                <td>Wed</td>
-
-                                                <td>Thu</td>
-
-                                                <td>Fri</td>
-
-                                                <td>Sat</td>
-
-                                                <td>Sun</td>
-
-                                                <td>Totals</td>
+                                        <thead >
+                                            <tr className="table-headings">
+                                                <td>Task</td>
+                                                <td>Sub Type</td>
+                                                <td>Date</td>
+                                                <td>No Of hours</td>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-
-                                                <td className="text-center">
-                                                    <a className="day-time day-time-link no-status"
-                                                        href="#timesheets/day/2020-08-17/person/jZUo8TZiC7z5eB53">
-                                                        0:00
-                                            </a>
+                                                <td>
+                                                    0:00
+                                                </td>
+                                                <td>
+                                                    0:00
                                                 </td>
 
-                                                <td className="text-center">
-                                                    <a className="day-time day-time-link no-status"
-                                                        href="#timesheets/day/2020-08-18/person/jZUo8TZiC7z5eB53">
-                                                        0:00
-                                            </a>
+                                                <td>
+                                                    0:00
                                                 </td>
-
-                                                <td className="text-center">
-                                                    <a className="day-time day-time-link no-status"
-                                                        href="#timesheets/day/2020-08-19/person/jZUo8TZiC7z5eB53">
-                                                        0:00
-                                            </a>
+                                                <td>
+                                                    0:00
                                                 </td>
-
-                                                <td className="text-center">
-                                                    <a className="day-time day-time-link no-status"
-                                                        href="#timesheets/day/2020-08-20/person/jZUo8TZiC7z5eB53">
-                                                        0:00
-                                            </a>
-                                                </td>
-
-                                                <td className="text-center">
-                                                    <a className="day-time day-time-link no-status"
-                                                        href="#timesheets/day/2020-08-21/person/jZUo8TZiC7z5eB53">
-                                                        0:00
-                                            </a>
-                                                </td>
-
-                                                <td className="text-center">
-                                                    <a className="day-time day-time-link no-status"
-                                                        href="#timesheets/day/2020-08-22/person/jZUo8TZiC7z5eB53">
-                                                        0:00
-                                            </a>
-                                                </td>
-
-                                                <td className="text-center">
-                                                    <a className="day-time day-time-link no-status"
-                                                        href="#timesheets/day/2020-08-23/person/jZUo8TZiC7z5eB53">
-                                                        0:00
-                                            </a>
-                                                </td>
-
-                                                <td className="font-bold font-large">0:00</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -151,5 +88,11 @@ function TimeSheet() {
         </main>
     </div>)
 }
+
+
+const TimeHeader = () => <div className="section_heading white-bg">
+    <h5 className="head5 col-md-4 left">
+        <span className="fa fa-users m-r-sm"></span>Time Entry</h5>
+</div>
 
 export default TimeSheet;

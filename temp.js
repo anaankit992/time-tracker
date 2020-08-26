@@ -1,84 +1,110 @@
-/**
- * app.js
- *
- * This is the entry file for the application, only setup and boilerplate
- * code.
- */
-
-// Needed for redux-saga es6 generator support
-import '@babel/polyfill';
-
-// Import all the third party stuff
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router';
-import history from 'utils/history';
-import 'sanitize.css/sanitize.css';
 
-// Import root app
-import App from 'containers/App';
+function TimeSheet() {
+    return (<div id="main" className="timesheet-wrapper">
+        <main className="col-sm-10 no_padding">
+            {/* <div className="row heading_container white-bg">
+                <div className="col-xs-12">
+                    <h2 class="head2">Timesheet</h2>
+                    <div><span className="team_name">Team name</span> / <span className="user_name">Employee name</span></div>
+                </div>
+            </div> */}
+            <div className="section_container timesheet">
+                <div className="row">
+                    <div className="col-md-11 no_padding">
+                        <div className="section_heading white-bg">
+                            <h5 className="head5 col-md-4 left">
+                                <span className="fa fa-users m-r-sm"></span>Time Entry</h5>
+                            {/* <div className="toggle_btn col-md-8">
+                                <div className="" role="group">
+                                    <button type="button" className="btn btn1 btn-secondary active">Daily</button>
+                                    <button type="button" className="btn btn1 btn-secondary">Weekly</button>
+                                    <button type="button" className="btn btn1 btn-secondary">Monthy</button>
+                                </div>
+                            </div> */}
+                        </div>
+                        <div className="section_main white-bg">
+                            <div className="col-md-12">
+                                <div className="section_row">
+                                    <div className="col-sm-5 left">
+                                        <label for="task">Select the Task</label>
+                                        <select className="form-control inputType" id="task">
+                                            <option>Default select</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-sm-5 left">
+                                        <label for="task">Task Type</label>
+                                        <select className="form-control inputType" id="task">
+                                            <option>Default select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="clear"></div>
+                                <div className="section_row">
+                                    <div className="col-sm-5 left">
+                                        <label for="data">Select Date </label>
+                                        <input type="date" className="form-control inputType" id="data"></input>
+                                    </div>
+                                    <div className="col-sm-5 left">
+                                        <label for="data">No of Hrs </label>
+                                        <input type="number" min="0:00" max="12:00" className="form-control inputType" id="data"></input>
+                                    </div>
+                                </div>
+                                <button className="btn btn-primary btn-large">
+                                    <i className="fa fa-check-square-o" aria-hidden="true"></i> Add
+                                </button>
 
-// Import Language Provider
-import LanguageProvider from 'containers/LanguageProvider';
+                                <div className="clear"></div>
+                            </div>
+                            <div className="display_area col-md-10">
+                                <div className="section-body">
+                                    <h5 className="head5 card-title">Entries</h5>
+                                    <table className="table table-striped">
+                                        <thead >
+                                            <tr className="table-headings">
+                                                <td>Task</td>
+                                                <td>Sub Type</td>
+                                                <td>Date</td>
+                                                <td>No Of hours</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
 
-// Load the favicon and the .htaccess file
-/* eslint-disable import/no-unresolved, import/extensions */
-import '!file-loader?name=[name].[ext]!./images/favicon.ico';
-import 'file-loader?name=.htaccess!./.htaccess';
-/* eslint-enable import/no-unresolved, import/extensions */
+                                                <td>
+                                                    0:00
+                                                </td>
 
-import configureStore from './configureStore';
+                                                <td >
+                                                        0:00
+                                            
+                                                </td>
 
-// Import i18n messages
-import { translationMessages } from './i18n';
+                                                <td>
+                                                        0:00
+                                                </td>
+                                                <td>
+                                                        0:00
+                                                </td>
 
-// Create redux store with history
-const initialState = {};
-const store = configureStore(initialState, history);
-const MOUNT_NODE = document.getElementById('app');
 
-// eslint-disable-next-line no-unused-vars
-const render = messages => {
-  ReactDOM.render(
-    <Provider store={store}>
-      <LanguageProvider messages={messages}>
-        <ConnectedRouter history={history}>
-          <App />
-        </ConnectedRouter>
-      </LanguageProvider>
-    </Provider>,
-    MOUNT_NODE,
-  );
-};
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div>
+                                <button className="btn btn-primary btn-large">
+                                    <i className="fa fa-check-square-o" aria-hidden="true"></i> Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-if (module.hot) {
-  // Hot reloadable React components and translation json files
-  // modules.hot.accept does not accept dynamic dependencies,
-  // have to be constants at compile-time
-  module.hot.accept(['./i18n', 'containers/App'], () => {
-    ReactDOM.unmountComponentAtNode(MOUNT_NODE);
-    render(translationMessages);
-  });
+        </main>
+    </div>)
 }
 
-// Chunked polyfill for browsers without Intl support
-if (!window.Intl) {
-  new Promise(resolve => {
-    resolve(import('intl'));
-  })
-    .then(() => Promise.all([import('intl/locale-data/jsonp/en.js')]))
-    .then(() => render(translationMessages))
-    .catch(err => {
-      throw err;
-    });
-} else {
-  render(translationMessages);
-}
-
-// Install ServiceWorker and AppCache in the end since
-// it's not most important operation and if main code fails,
-// we do not want it installed
-if (process.env.NODE_ENV === 'production') {
-  require('offline-plugin/runtime').install(); // eslint-disable-line global-require
-}
+export default TimeSheet;
