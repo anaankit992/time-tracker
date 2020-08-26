@@ -68,10 +68,10 @@ function Dashboard() {
                         {/* body */}
                         <div className="notification-body">
                             <div className="notification-text">
-                                event on 10th
+                                Your Time Entires for Last Week Got approved
                         </div>
                             <div className="notification-text">
-                                event on 16th
+                               CSR Activity on 14th, contact CSR team for more details
                         </div>
                         </div>
                     </div>

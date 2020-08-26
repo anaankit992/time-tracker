@@ -10,25 +10,46 @@
 .fa-files-o {
   margin-right: 10px;
 }
-.section_data{
+.section_data {
   min-height: 20px;
 }
-.btn-report{
+
+.section_data .user-name {
+    margin-left: 50px;
+}
+
+.btn-report {
   text-align: center;
   display: block;
   margin: 0 auto;
 }
 .display_area_reports {
-  margin: 10px 0 0 18px;
+  margin: 50px 0 0 18px;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
-.table_reports{
-  overflow-x:auto;
+
+.section_row  .form-control {
+  font-size: 13px;
 }
-.reports-wrapper .table{
+
+.table_reports {
+  overflow-x: auto;
+}
+
+.table_reports td {
+  /* width: 100%; */
+  white-space: nowrap;
+
+}
+
+.reports-wrapper {
+  padding-bottom: 80px;
+}
+
+.reports-wrapper .table {
   table-layout: auto;
-  width: 100%
+  width: 100%;
 }
 .reports-wrapper .form-control {
   color: #686b6d;
@@ -44,3 +65,8 @@
   color: #686b6d;
 }
 
+
+
+.report-date {
+  margin-left:5px;
+}

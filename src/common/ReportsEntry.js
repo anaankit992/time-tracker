@@ -1,29 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SelectInput from '../common/SelectInput';
+import ReportsTable from '../common/ReportsTable';
+import {users} from "../Constants";
 
-const selectOptions = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
-];
+function ReportsEntry({ submitData }) {
 
-function ReportsEntry() {
+    const [selectedDate, setSelectedDate] = useState("");
+    const handleDateSelect = e => {
+        setSelectedDate(e.target.value)
+    }
     return (
-        <div className="col-md-12 section_data">
-             <div className="section_row">
-                <div className="col-sm-4 left">
-                    <label for="data">Select Date </label>
-                    <input type="date" className="form-control inputType" id="data"></input>
+        <>
+            <div className="col-md-12 section_data">
+                <div className="section_row">
+                    <div className="col-sm-4 left report-date">
+                        <label for="date">Select Date </label>
+                        <input onChange={handleDateSelect} type="date" className="form-control inputType" id="data"></input>
+                    </div>
+                    <div className="col-sm-4 user-name left">
+                        <label for="task">User Name</label>
+                        <SelectInput isDisabled={true} placeholder=" Disabled for now" options={users} handleChange={e => { console.log(e) }} />
+                    </div>
                 </div>
-                <div className="col-sm-4 left">
-                    <label for="task">Employee Name</label>
-                    <SelectInput options={selectOptions} handleChange={e => { console.log(e) }} />
-                </div>
-                <button className="col-sm-2 btn btn-primary btn-large">
-                    <i className="fa fa-check-square-o" aria-hidden="true"></i> Generate
-                </button>
             </div>
-        </div>
+            <ReportsTable selectedDate={selectedDate} submitData={submitData} />
+        </>
     )
 }
 

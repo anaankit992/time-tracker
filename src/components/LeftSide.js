@@ -1,7 +1,6 @@
 import React from 'react';
 
 function LeftSide({ history }) {
-    console.log(history)
     return (
         <div className="left-side">
             <ul>

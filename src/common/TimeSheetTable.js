@@ -3,7 +3,6 @@ import React from 'react';
 
 function TimeSheetTable(props) {
     const { entries } = props;
-    debugger;
     return (
         <div className="display_area col-md-10">
             <div className="section-body">

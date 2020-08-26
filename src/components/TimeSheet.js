@@ -10,13 +10,13 @@ function TimeSheet(props) {
 
     const handleSubmit = () => {
         setSubmitData({
+            ...submitData,
             [entries[0].date]: [
                 ...entries
             ]
         })
         setEntries([])
         toast.success(`Time Entries for the day ${[entries[0].date]} have been submitted successfully`);
-
     }
 
     return (<div id="main" className="timesheet-wrapper">

@@ -9,7 +9,28 @@ import Reports from '../components/Reports';
 
 function Home(props) {
     const [entries, setEntries] = useState([]);
-    const [submitData, setSubmitData] = useState([])
+    const [submitData, setSubmitData] = useState({
+        "2020-08-12": [
+          {
+            "date": "2020-08-12",
+            "taskType": "Daily Standups",
+            "taskName": "Task assignment Standup",
+            "hrs": "3"
+          },
+          {
+            "date": "2020-08-12",
+            "taskType": "Daily Standups",
+            "taskName": "Retrospective meeting",
+            "hrs": "4"
+          },
+          {
+            "date": "2020-08-12",
+            "taskType": "Software development",
+            "taskName": "Self Review",
+            "hrs": "1"
+          }
+        ]
+      })
 
     const { history } = props
     const pathName = history.location.pathname;
@@ -32,7 +53,10 @@ function Home(props) {
 
 
                 {pathName === "/reports" &&
-                    <Reports history={history} />
+                    <Reports
+                        submitData={submitData} 
+                        setSubmitData={setSubmitData}
+                        history={history} />
                 }
 
             </div>

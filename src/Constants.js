@@ -56,3 +56,16 @@ export const taskNames = {
         }
     ]
 }
+
+
+
+
+export const users = [
+    { label: "Ankit", value: "ankit" },
+    { label: "Lakshmi", value: "Lakshmi" },
+    { label: "Bindo", value: "Bindo" },
+    { label: "Astha", value: "Astha" },
+]
+
+
+

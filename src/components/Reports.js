@@ -1,29 +1,30 @@
 import React from 'react';
 import ReportsEntry from '../common/ReportsEntry';
-import TimeSheetTable from '../common/ReportsTable';
 
 
-function Reports() {
+function Reports(props) {
+    const {submitData,setSubmitData } = props;
+    console.log(submitData);
     return (
         <div id="main" className="reports-wrapper">
-        <main className="col-sm-10 no_padding">
-            <div className="section_container timesheet">
-                <div className="row">
-                    <div className="col-md-11 no_padding">
-                        <TimeHeader />
-                        <div className="section_main white-bg">
-                            {/* Time Entry Section */}
-                            <ReportsEntry />
-                            {/*Time Sheet Entry  */}
-                            <TimeSheetTable />
-                            
+            <main className="col-sm-10 no_padding">
+                <div className="section_container timesheet">
+                    <div className="row">
+                        <div className="col-md-11 no_padding">
+                            <TimeHeader />
+                            <div className="section_main white-bg">
+                                {/* Time Entry Section */}
+                                <ReportsEntry submitData={submitData} />
+                                {/*Time Sheet Entry  */}
+                                <button className="btn btn-primary ">Export</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-        </main>
-    </div>
+                </div>
+
+            </main>
+        </div>
     )
 }
 
