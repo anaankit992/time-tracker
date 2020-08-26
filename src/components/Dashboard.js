@@ -12,7 +12,7 @@ function Dashboard() {
                     <div className="activity-card ">
                         {/* heading */}
                         <div className="heading">
-                            <h5>Your activities this week</h5>
+                            <h5>Your chart for the week</h5>
                         </div>
                         {/* body */}
                         <div className="body">
@@ -30,14 +30,31 @@ function Dashboard() {
                     <div class="chart-card">
                         {/* heading */}
                         <div className="heading">
-                            <h5>Your times this week</h5>
+                            <h5>Your Times this week</h5>
                         </div>
                         {/* body */}
                         <div className="body">
-                            <i className="fa fa-bar-chart"></i>
+                            {/* <i className="fa fa-bar-chart"></i>
                             <div className="placeholder-text">
                                 We will Probably Display a line chart here
-                </div>
+                </div> */}
+
+                            <div className="logs">
+                                <div className="log-entry">
+                                   Monday 17/8 - 8Hrs
+                                </div>
+                                <div className="log-entry">
+                                Monday 17/8 - 8Hrs
+                                </div>    <div className="log-entry">
+                                Monday  17/8 - 8Hrs
+                                </div>
+                                <div className="log-entry">
+                                Monday 17/8 - 8Hrs
+                                </div>
+                                 <div className="log-entry">
+                                 Monday  17/8 - 8Hrs
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -71,7 +88,7 @@ function Dashboard() {
                                 Your Time Entires for Last Week Got approved
                         </div>
                             <div className="notification-text">
-                               CSR Activity on 14th, contact CSR team for more details
+                                CSR Activity on 14th, contact CSR team for more details
                         </div>
                         </div>
                     </div>

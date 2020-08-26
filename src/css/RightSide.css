@@ -32,6 +32,7 @@
   display: inline-block;
   margin-left: 25px;
   background: #ffff;
+  text-align: left
 }
 
 text {
@@ -51,6 +52,13 @@ text {
   min-height: 300px;
   background: #ffff;
 }
+
+.action-card .body {
+  padding:50px;
+  text-align: center;
+
+}
+
 
 .notification-card {
   width: 83%;
@@ -83,12 +91,10 @@ text {
 }
 
 .right-side .body {
-  text-align: center;
   line-height: 1.42857143;
   color: #c7c7c7;
   font-size: 13px;
   font-weight: 700;
-  padding: 50px;
 }
 
 .right-side .body i {
@@ -102,4 +108,14 @@ text {
 .notification-text {
   font-weight: normal;
   text-align: left;
+}
+.logs {
+  padding:10px
+}
+.log-entry {
+  font-weight: lighter;
+  font-size: 14px;
+  color:#FF7920;
+  cursor: pointer;
+  margin-top:10px;
 }
