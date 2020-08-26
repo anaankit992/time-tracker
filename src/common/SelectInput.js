@@ -1,6 +1,8 @@
 import React from 'react';
 import Select from 'react-select';
 
+
+
 function SelectInput(props) {
 
     const { options, handleChange, selectedOption } = props;
