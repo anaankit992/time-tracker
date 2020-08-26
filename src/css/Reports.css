@@ -5,6 +5,7 @@
   padding-left: 220px;
   padding-top: 80px;
   padding-bottom: 20px;
+  font-size: 13px;
 }
 .fa-files-o {
   margin-right: 10px;
@@ -18,12 +19,28 @@
   margin: 0 auto;
 }
 .display_area_reports {
-  margin: 50px 0 0 18px;
+  margin: 10px 0 0 18px;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-  scroll-behavior: smooth;
-  overflow-x: scroll;
 }
-.table-headings_reports td{
-  min-width: 50px;
+.table_reports{
+  overflow-x:auto;
 }
+.reports-wrapper .table{
+  table-layout: auto;
+  width: 100%
+}
+.reports-wrapper .form-control {
+  color: #686b6d;
+  font-weight: normal;
+}
+
+.reports-wrapper .table-headings {
+  color: #686b6d;
+  font-weight: 500;
+}
+
+.reports-wrapper tbody {
+  color: #686b6d;
+}
+
