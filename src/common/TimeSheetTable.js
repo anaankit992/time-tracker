@@ -1,7 +1,9 @@
 import React from 'react';
 
 
-function TimeSheetTable() {
+function TimeSheetTable(props) {
+    const { entries } = props;
+    debugger;
     return (
         <div className="display_area col-md-10">
             <div className="section-body">
@@ -16,21 +18,27 @@ function TimeSheetTable() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                0:00
-                        </td>
-                            <td>
-                                0:00
-                        </td>
 
-                            <td>
-                                0:00
-                        </td>
-                            <td>
-                                0:00
-                        </td>
-                        </tr>
+                        {entries.map(entry => (
+                            <tr key={entry.taskName}>
+                                <td>
+                                    {entry.date}
+                                </td>
+                                <td>
+                                    {entry.taskType}
+                                </td>
+                                <td>
+                                    {entry.taskName}
+                                </td>
+                                <td>
+                                    {entry.hrs}
+                                </td>
+                            </tr>
+                        ))}
+
+
+
+
                     </tbody>
                 </table>
             </div>

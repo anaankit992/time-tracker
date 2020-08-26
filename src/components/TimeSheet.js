@@ -2,9 +2,25 @@ import React from 'react';
 import TimeEntry from '../common/TimeEntry';
 import TimeSheetTable from '../common/TimeSheetTable';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function TimeSheet() {
+function TimeSheet(props) {
+    const { entries, setEntries, submitData, setSubmitData } = props;
+
+    const handleSubmit = () => {
+        setSubmitData({
+            [entries[0].date]: [
+                ...entries
+            ]
+        })
+        setEntries([])
+        toast.success(`Time Entries for the day ${[entries[0].date]} have been submitted successfully`);
+
+    }
+
     return (<div id="main" className="timesheet-wrapper">
+        <ToastContainer />
         <main className="col-sm-10 no_padding">
             <div className="section_container timesheet">
                 <div className="row">
@@ -12,10 +28,10 @@ function TimeSheet() {
                         <TimeHeader />
                         <div className="section_main white-bg">
                             {/* Time Entry Section */}
-                            <TimeEntry />
+                            <TimeEntry setEntries={setEntries} entries={entries} />
                             {/*Time Sheet Entry  */}
-                            <TimeSheetTable />
-                            <button className="btn btn-primary btn-large">
+                            <TimeSheetTable submitData={submitData} entries={entries} />
+                            <button disabled={!entries[0]} onClick={handleSubmit} className="btn btn-primary btn-large">
                                 <i className="fa fa-check-square-o" aria-hidden="true"></i> Submit
                                 </button>
                         </div>

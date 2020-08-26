@@ -16,10 +16,12 @@ function Dashboard() {
                         </div>
                         {/* body */}
                         <div className="body">
-                            <i className="fa fa-pie-chart"></i>
+                            {/* <i className="fa fa-pie-chart"></i>
                             <div className="placeholder-text">
                                 We will Probably Display a pie Chart here
-                        </div>
+                        </div> */}
+                            <LineChart />
+
                         </div>
                     </div>
 
@@ -32,13 +34,10 @@ function Dashboard() {
                         </div>
                         {/* body */}
                         <div className="body">
-                            {/* <i className="fa fa-bar-chart"></i>
+                            <i className="fa fa-bar-chart"></i>
                             <div className="placeholder-text">
                                 We will Probably Display a line chart here
-
-                </div> */}
-                            <LineChart />
-
+                </div>
                         </div>
                     </div>
 

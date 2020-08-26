@@ -8,6 +8,9 @@ import Reports from '../components/Reports';
 
 
 function Home(props) {
+    const [entries, setEntries] = useState([]);
+    const [submitData, setSubmitData] = useState([])
+
     const { history } = props
     const pathName = history.location.pathname;
 
@@ -23,12 +26,12 @@ function Home(props) {
                 }
 
                 {pathName === "/timeSheet" &&
-                    <TimeSheet history={history} />
+                    <TimeSheet submitData={submitData} setSubmitData={setSubmitData}
+                        setEntries={setEntries} entries={entries} history={history} />
                 }
 
 
                 {pathName === "/reports" &&
-
                     <Reports history={history} />
                 }
 

@@ -6,7 +6,7 @@ function LineChart() {
     return (
         <Chart
             width={"100%"}
-            height={'250px'}
+            height={'100%'}
             chartType="LineChart"
             loader={<div>Loading Chart</div>}
             data={[
@@ -16,6 +16,7 @@ function LineChart() {
                 ["Wed", 4],
                 ["Thu", 3],
                 ["Fri", 6],
+
             ]}
 
             rootProps={{ 'data-testid': '1' }}

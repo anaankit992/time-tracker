@@ -104,6 +104,7 @@ h5.head5 {
 }
 .btn-primary,
 .btn-primary:hover,
+.btn-primary:disabled,
 .btn-primary:focus {
   background-color: #ff7a21;
   border-color: #ff7a21;
