@@ -83,7 +83,7 @@ function TimeEntry(props) {
                 </div>
                 <div className="col-sm-5 left">
                     <label for="data">No of Hrs </label>
-                    <input onChange={handleHrsSelect} disabled={!selections.taskName} type="number" min="0" value={selections.hrs} className="form-control inputType" id="data"></input>
+                    <input  onChange={handleHrsSelect} disabled={!selections.taskName} type="number" min="0" value={selections.hrs} className="form-control inputType" id="data"></input>
                 </div>
             </div>
 

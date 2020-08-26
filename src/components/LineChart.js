@@ -15,7 +15,7 @@ function LineChart() {
                 ["Tue", 2],
                 ["Wed", 4],
                 ["Thu", 3],
-                ["Fri", 6],
+                ["Fri", 8],
 
             ]}
 
