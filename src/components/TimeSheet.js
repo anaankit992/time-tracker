@@ -11,13 +11,12 @@ function TimeSheet() {
                     <div className="col-md-11 no_padding">
                         <TimeHeader />
                         <div className="section_main white-bg">
-
                             {/* Time Entry Section */}
                             <TimeEntry />
-                             {/*Time Sheet Entry  */}
+                            {/*Time Sheet Entry  */}
                             <TimeSheetTable />
-                                <button className="btn btn-primary btn-large">
-                                    <i className="fa fa-check-square-o" aria-hidden="true"></i> Submit
+                            <button className="btn btn-primary btn-large">
+                                <i className="fa fa-check-square-o" aria-hidden="true"></i> Submit
                                 </button>
                         </div>
                     </div>

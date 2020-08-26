@@ -31,9 +31,11 @@ function TimeEntry() {
                     <input type="number" min="0:00" max="12:00" className="form-control inputType" id="data"></input>
                 </div>
             </div>
+
             <button className="btn btn-primary btn-large">
                 <i className="fa fa-check-square-o" aria-hidden="true"></i> Add
                                 </button>
+
         </div>
     )
 }

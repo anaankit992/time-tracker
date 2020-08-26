@@ -4,6 +4,7 @@
 @import "./css/LeftSidebar.css";
 @import "./css/RightSide.css";
 @import "./css/TimeSheet.css";
+@import "./css/Reports.css";
 
 body{
     color: #676a6c;

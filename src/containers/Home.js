@@ -4,6 +4,7 @@ import LeftSide from '../components/LeftSide';
 import Dashboard from '../components/Dashboard';
 import { withRouter } from 'react-router-dom';
 import TimeSheet from '../components/TimeSheet';
+import Reports from '../components/Reports';
 
 
 function Home(props) {
@@ -23,6 +24,12 @@ function Home(props) {
 
                 {pathName === "/timeSheet" &&
                     <TimeSheet history={history} />
+                }
+
+
+                {pathName === "/reports" &&
+
+                    <Reports history={history} />
                 }
 
             </div>

@@ -17,18 +17,19 @@ function LeftSide({ history }) {
                         <span>Timesheets</span>
                     </a>
                 </li>
-                <li className={history.location.pathname === "/approvals" && "active"} onClick={() => history.push("/approvals")}>
-                    <a href="javascript:void(0)">
-                        <i class="fa fa-check"></i>
-                        <span>Approvals</span>
-                    </a>
-                </li>
                 <li className={history.location.pathname === "/reports" && "active"} onClick={() => history.push("/reports")}>
                     <a href="javascript:void(0)">
                         <i class="fa fa-files-o"></i>
                         <span>Reports</span>
                     </a>
                 </li>
+                <li className={history.location.pathname === "/approvals" && "active"} onClick={() => history.push("/approvals")}>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-check"></i>
+                        <span>Approvals</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     )
