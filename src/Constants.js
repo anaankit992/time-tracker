@@ -69,7 +69,7 @@ export const users = [
 
 
 
-const userDataSet = {
+export const userDataSet = {
     ankit: {
         "08/12/2020": [
             {
@@ -157,7 +157,7 @@ const userDataSet = {
                 issueType: "Task4",
                 remarks: "Not Applicable"
             }
-        ]   
+        ]
     },
     binod: {
         "08/20/2020": [
@@ -197,7 +197,7 @@ const userDataSet = {
                 issueType: "Task3",
                 remarks: "-"
             }
-        ]   
+        ]
     },
     samiksha: {
         "08/12/2020": [
@@ -228,6 +228,19 @@ const userDataSet = {
                 issueType: "Task3",
                 remarks: "-"
             }
-        ]   
+        ]
     }
 }
+
+
+export const reportLabels = [
+    "SL Num",
+    "Date",
+    "Task Type",
+    "Task Name",
+    "No Of Hrs",
+    "Jeera Ticket Number",
+    "Jeers Ticket Description",
+    "Issue Type",
+    "Remarks"
+]

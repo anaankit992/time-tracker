@@ -37,10 +37,10 @@
   overflow-x: auto;
 }
 
-.table_reports td {
+.table_reports th {
   /* width: 100%; */
   white-space: nowrap;
-
+  font-weight: 500;
 }
 
 .reports-wrapper {

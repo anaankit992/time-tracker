@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { reportLabels } from "../Constants";
 
 function ReportsTable(props) {
     const { submitData, selectedDate } = props;
@@ -24,22 +25,40 @@ function ReportsTable(props) {
                     <table className="table table-striped">
                         <thead >
                             <tr className="table-headings">
-                                {organizeData().length ? (
+                                {/* {organizeData().length ? (
                                     organizeData().map(sel => (
-                                        <td key={sel.taskName}>{sel.taskName}</td>
+                                        <th key={sel.taskName}>{sel.taskName}</th>
                                     ))
-                                ) : null}
+                                ) : null} */}
+
+                                {reportLabels.map(label => (
+                                    <th key={label}>{label}</th>
+                                ))}
                             </tr>
+
                         </thead>
                         <tbody>
-                            <tr>
-                                {organizeData().length ? (
-                                    organizeData().map(sel => (
-                                        <td key={`${sel.taskName} ${sel.hrs}`}>{sel.hrs} Hr</td>
-                                    ))
-                                ):<div>No Data Avaliable for the selected date</div>}
+                            {selectedDate && submitData[selectedDate] ? (
+                                submitData[selectedDate].map((sel, i) => {
+                                    return (
+                                        (
+                                            <tr key={`${sel.taskName} ${sel.hrs}`}>
+                                                <td>{i + 1}</td>
+                                                <td>{sel.date}</td>
+                                                <td>{sel.taskType}</td>
+                                                <td>{sel.taskName}</td>
+                                                <td>{sel.hrs}</td>
+                                                <td>{sel.ticketNum}</td>
+                                                <td>{sel.ticketDesc}</td>
+                                                <td>{sel.issueType}</td>
+                                                <td>{sel.remarks}</td>
+                                            </tr>
 
-                            </tr>
+                                        )
+                                    )
+                                })
+                            ) : null}
+
                         </tbody>
                     </table>
                 </div>
