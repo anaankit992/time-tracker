@@ -1,5 +1,6 @@
 import React from 'react';
-import ReportsEntry from '../common/ReportsEntry';
+import ReportsEntry from '../common/ApprovalEntry';
+import ApprovalEntry from '../common/ApprovalEntry';
 
 function Approvals(){
     return(
@@ -10,9 +11,9 @@ function Approvals(){
                     <div className="col-md-11 no_padding">
                         <TimeHeader />
                         <div className="section_main white-bg">
-                            {/* Time Entry Section */}
+                            {/* Approval Report Section */}
+                            <ApprovalEntry />
                             {/*Time Sheet Entry  */}
-                            <button className="btn btn-primary ">Show</button>
                         </div>
                     </div>
                 </div>
