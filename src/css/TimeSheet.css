@@ -102,6 +102,9 @@ h5.head5 {
 .fa-users {
   margin-right: 10px;
 }
+.clear{
+  clear: both;
+}
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:disabled,

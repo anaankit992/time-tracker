@@ -86,7 +86,28 @@ function TimeEntry(props) {
                     <input  onChange={handleHrsSelect} disabled={!selections.taskName} type="number" min="0" value={selections.hrs} className="form-control inputType" id="data"></input>
                 </div>
             </div>
-
+            <div className="clear"></div>
+            <div className="section_row">
+                <div className="col-sm-5 left">
+                    <label for="task">Jira Ticket Number</label>
+                    <input className="form-control inputType" id="tkt_no"></input>
+                </div>
+                <div className="col-sm-5 left">
+                    <label for="data">Ticket Description</label>
+                    <input className="form-control inputType" id="tkt_no"></input>
+                </div>
+            </div>
+            <div className="clear"></div>
+            <div className="section_row">
+                <div className="col-sm-5 left">
+                    <label for="task">Issue Type</label>
+                    <input className="form-control inputType" id="tkt_no"></input>
+                </div>
+                <div className="col-sm-5 left">
+                    <label for="data">Remarks</label>
+                    <input className="form-control inputType" id="tkt_no"></input>
+                </div>
+            </div>
             <button onClick={handleAdd} disabled={Object.values(selections).includes("")} className="btn btn-primary btn-large">
                 <i className="fa fa-check-square-o" aria-hidden="true"></i> Add
                                 </button>
