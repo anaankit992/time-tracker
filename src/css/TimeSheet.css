@@ -13,6 +13,9 @@ main {
   padding: 0 15px;
   margin-left: 220px;
 }
+.section_row .div_nopadding {
+  padding: 0;
+}
 .no_padding {
   padding: 0;
 }
@@ -58,9 +61,6 @@ h5.head5 {
   border-width: 1px 0;
   padding: 20px 0 20px;
 }
-.section_row div {
-  padding: 0;
-}
 .display_area {
   margin: 13px 0 0 18px;
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -74,6 +74,13 @@ h5.head5 {
 .inputType {
   width: 60%;
   display: inline-block;
+}
+.inputType:focus{
+  border-color: #268aff;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 0 0 1px #268aff;
 }
 .section_main label {
   min-width: 120px;
@@ -137,5 +144,7 @@ h5.head5 {
   color: #686b6d;
   font-size: 13px;
 }
-
-
+.form-control:disabled{
+  background-color: #f2f2f2;
+  border-color: #e6e6e6;
+}
