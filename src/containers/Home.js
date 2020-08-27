@@ -5,6 +5,7 @@ import Dashboard from '../components/Dashboard';
 import { withRouter } from 'react-router-dom';
 import TimeSheet from '../components/TimeSheet';
 import Reports from '../components/Reports';
+import Approvals from '../components/Approvals';
 
 
 function Home(props) {
@@ -58,7 +59,10 @@ function Home(props) {
                         setSubmitData={setSubmitData}
                         history={history} />
                 }
+                {pathName === "/approvals" &&
+                    <Approvals history={history} />
 
+                }
             </div>
         </div>
     )
