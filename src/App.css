@@ -5,6 +5,7 @@
 @import "./css/RightSide.css";
 @import "./css/TimeSheet.css";
 @import "./css/Reports.css";
+@import "./css/Approvals.css";
 
 body{
     color: #676a6c;
