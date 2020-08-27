@@ -10,33 +10,30 @@ function TimeSheetTable(props) {
                 <table className="table table-striped">
                     <thead >
                         <tr className="table-headings">
-                            <td>Task</td>
-                            <td>Sub Type</td>
                             <td>Date</td>
+                            <td>Task Type</td>
+                            <td>Task Name</td>
                             <td>No Of hours</td>
+                            <td>Jeera Ticket Number</td>
+                            <td>Jeera Ticket Description</td>
+                            <td>Issue Type</td>
+                            <td>Remarks</td>
+
                         </tr>
                     </thead>
                     <tbody>
 
                         {entries.map(entry => (
                             <tr key={entry.taskName}>
-                                <td>
-                                    {entry.date}
-                                </td>
-                                <td>
-                                    {entry.taskType}
-                                </td>
-                                <td>
-                                    {entry.taskName}
-                                </td>
-                                <td>
-                                    {entry.hrs}
-                                </td>
-                            </tr>
-                        ))}
+                                {
+                                    Object.keys(entry).map(k => (
+                                        <td>{entry[k]}</td>
+                                    ))
+                                }
 
 
-
+                            </tr>)
+                        )}
 
                     </tbody>
                 </table>

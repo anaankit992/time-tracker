@@ -1,23 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SelectInput from '../common/SelectInput';
 import { taskType, taskNames } from "../Constants";
+
+const initialSelection = {
+    date: '',
+    taskType: '',
+    taskName: '',
+    hrs: '',
+    ticketNum: '',
+    ticketDesc: '',
+    issueType: '',
+    remarks: ''
+}
 
 function TimeEntry(props) {
 
     const { entries, setEntries } = props;
-    const [selections, setSelections] = useState({
-        date: '',
-        taskType: '',
-        taskName: '',
-        hrs: ''
-    });
+    const [selections, setSelections] = useState(initialSelection);
 
     const handleDateSelect = e => {
         setSelections({
+            ...initialSelection,
             date: e.target.value,
-            taskType: '',
-            taskName: '',
-            hrs: ''
+
         })
         setEntries([])
     }
@@ -25,16 +30,18 @@ function TimeEntry(props) {
     const handleSelect = (sel, type) => {
         if (type === "taskType") {
             setSelections({
+                ...initialSelection,
                 ...selections,
                 [type]: sel.value,
                 taskName: '',
-                hrs: ''
             })
         } else {
             setSelections({
-                ...selections,
+                ...initialSelection,
                 [type]: sel.value,
-                hrs: ''
+                date: selections.date,
+                taskType: selections.taskType,
+
             })
         }
 
@@ -47,18 +54,18 @@ function TimeEntry(props) {
         ])
 
         setSelections({
-            ...selections,
-            taskType: '',
-            taskName: '',
-            hrs: ''
+            ...initialSelection,
+            date: selections.date
+
         })
 
     }
 
-    const handleHrsSelect = e => {
+    const handleValuesSelect = (e, type) => {
         setSelections({
             ...selections,
-            hrs: e.target.value,
+            [type]: e.target.value,
+
         })
     }
 
@@ -66,49 +73,65 @@ function TimeEntry(props) {
     return (
         <div className="col-md-12">
             <div className="section_row">
-                <div className="col-sm-5 left div_nopadding">
-                    <label for="data">Select Date </label>
-                    <input onChange={handleDateSelect} type="date" value={selections.date} className="form-control inputType" id="data"></input>
+                <div className="col-sm-5 left">
+                    <label >Select Date </label>
+                    <input onChange={handleDateSelect} type="date" value={selections.date} className="form-control inputType"></input>
                 </div>
-                <div className="col-sm-5 left div_nopadding">
-                    <label for="task">Task Type</label>
+                <div className="col-sm-5 left">
+                    <label>Task Type</label>
                     <SelectInput onChange={e => handleSelect(e, "taskType")} value={{ label: selections.taskType, value: selections.taskType }} isDisabled={!selections.date} options={taskType} handleChange={e => { console.log(e) }} />
                 </div>
 
             </div>
             <div className="section_row">
-                <div className="col-sm-5 left div_nopadding">
-                    <label for="task">Task Name</label>
+                <div className="col-sm-5 left">
+                    <label>Task Name</label>
                     <SelectInput onChange={e => handleSelect(e, "taskName")} value={{ label: selections.taskName, value: selections.taskName }} isDisabled={!selections.taskType} options={taskNames[selections.taskType]} handleChange={e => { console.log(e) }} />
                 </div>
-                <div className="col-sm-5 left div_nopadding">
-                    <label for="data">No of Hrs </label>
-                    <input  onChange={handleHrsSelect} disabled={!selections.taskName} type="number" min="0" value={selections.hrs} className="form-control inputType" id="data"></input>
+                <div className="col-sm-5 left">
+                    <label>No of Hrs </label>
+                    <input onChange={e => handleValuesSelect(e, "hrs")} disabled={!selections.taskName} type="number" min="0" max="23" value={selections.hrs} className="form-control inputType" />
                 </div>
             </div>
             <div className="clear"></div>
             <div className="section_row">
-                <div className="col-sm-5 left div_nopadding">
-                    <label for="task">Jira Ticket Number</label>
-                    <input className="form-control inputType" id="tkt_no"></input>
+                <div className="col-sm-5 left">
+                    <label >Jira Ticket Number</label>
+                    <input
+                        onChange={e => handleValuesSelect(e, "ticketNum")}
+                        value={selections.ticketNum}
+                        disabled={!selections.hrs}
+                        className="form-control inputType" />
                 </div>
-                <div className="col-sm-5 left div_nopadding">
-                    <label for="data">Ticket Description</label>
-                    <input className="form-control inputType" id="tkt_no"></input>
+                <div className="col-sm-5 left">
+                    <label >Ticket Description</label>
+                    <input
+                        onChange={e => handleValuesSelect(e, "ticketDesc")}
+                        value={selections.ticketDesc}
+                        disabled={!selections.hrs}
+                        className="form-control inputType" />
                 </div>
             </div>
             <div className="clear"></div>
             <div className="section_row">
-                <div className="col-sm-5 left div_nopadding">
-                    <label for="task">Issue Type</label>
-                    <input className="form-control inputType" id="tkt_no"></input>
+                <div className="col-sm-5 left">
+                    <label >Issue Type</label>
+                    <input
+                        onChange={e => handleValuesSelect(e, "issueType")}
+                        value={selections.issueType}
+                        disabled={!selections.hrs}
+                        className="form-control inputType" />
                 </div>
-                <div className="col-sm-5 left div_nopadding">
-                    <label for="data">Remarks</label>
-                    <input className="form-control inputType" id="tkt_no"></input>
+                <div className="col-sm-5 left">
+                    <label >Remarks</label>
+                    <input
+                        onChange={e => handleValuesSelect(e, "remarks")}
+                        value={selections.remarks}
+                        disabled={!selections.hrs}
+                        className="form-control inputType" />
                 </div>
             </div>
-            <button onClick={handleAdd} disabled={Object.values(selections).includes("")} className="btn btn-primary btn-large">
+            <button onClick={handleAdd} disabled={!selections.hrs} className="btn btn-primary btn-large">
                 <i className="fa fa-check-square-o" aria-hidden="true"></i> Add
                                 </button>
 
