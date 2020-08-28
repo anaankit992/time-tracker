@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import ApprovalsTable from '../common/ApprovalsTable';
 
-import ReportsTable from '../common/ReportsTable';
 function ApprovalEntry({ submitData }){
 
     const [selectedDate, setSelectedDate] = useState("");
@@ -19,7 +19,7 @@ function ApprovalEntry({ submitData }){
                 <button className="btn btn-primary ">Show</button>
             </div>
         </div>
-        <ReportsTable selectedDate={selectedDate} submitData={submitData} />
+        <ApprovalsTable selectedDate={selectedDate} submitData={submitData} />
         </>
     )
 

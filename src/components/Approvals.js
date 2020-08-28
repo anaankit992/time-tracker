@@ -1,5 +1,4 @@
 import React from 'react';
-import ReportsEntry from '../common/ApprovalEntry';
 import ApprovalEntry from '../common/ApprovalEntry';
 
 function Approvals(){
