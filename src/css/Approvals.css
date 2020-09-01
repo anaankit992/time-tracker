@@ -19,3 +19,8 @@
 .approvals-wrapper {
   padding-bottom: 100px;
 }
+
+
+.approvals-wrapper input {
+  color:#686b6d;
+}
