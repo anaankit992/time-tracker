@@ -73,7 +73,7 @@ function TimeEntry(props) {
     return (
         <div className="col-md-12">
             <div className="section_row">
-                <div className="col-sm-5 left">
+                <div className="col-sm-5 left time-sheet-date">
                     <label >Select Date </label>
                     <input onChange={handleDateSelect} type="date" value={selections.date} className="form-control inputType"></input>
                 </div>

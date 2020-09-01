@@ -18,11 +18,11 @@ function ReportsEntry({ submitData, urlParams }) {
         <>
             <div className="col-md-12 section_data">
                 <div className="section_row">
-                    <div className="col-sm-4 left report-date">
+                    <div className="col-md-5 left report-date">
                         <label for="date">Select Date </label>
                         <input onChange={handleDateSelect} type="date" className="form-control inputType" id="data"></input>
                     </div>
-                    {urlParams && urlParams.user === "admin" && <div className="col-sm-4 user-name left">
+                    {urlParams && urlParams.user === "admin" && <div className="col-md-5 user-name left">
                         <label for="task">User Name</label>
                         <SelectInput  value={name} options={users} onChange={e => handleNameSelect(e)} />
                     </div>}

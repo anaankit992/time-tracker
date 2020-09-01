@@ -14,9 +14,6 @@
   min-height: 20px;
 }
 
-.section_data .user-name {
-    margin-left: 50px;
-}
 
 .btn-report {
   text-align: center;
@@ -65,8 +62,7 @@
   color: #686b6d;
 }
 
-
-
-.report-date {
-  margin-left:5px;
+.report-date input{
+  max-width: 250px;
+  height: 37px;
 }

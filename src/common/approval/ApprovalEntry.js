@@ -12,7 +12,7 @@ function ApprovalEntry(props) {
         <>
             <div className="col-md-12 section_data">
                 <div className="section_row">
-                    <div className="col-sm-4 left report-date">
+                    <div className="col-sm-12 left report-date">
                         <label for="date">Select Date </label>
                         <input onChange={handleDateSelect} type="date" className="form-control inputType" id="data"></input>
                     </div>
