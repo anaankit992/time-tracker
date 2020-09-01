@@ -1,5 +1,5 @@
 import React from 'react';
-import ReportsEntry from '../common/ReportsEntry';
+import ReportsEntry from '../common/reports/ReportsEntry';
 
 
 function Reports(props) {

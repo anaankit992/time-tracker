@@ -1,6 +1,6 @@
 import React from 'react';
-import TimeEntry from '../common/TimeEntry';
-import TimeSheetTable from '../common/TimeSheetTable';
+import TimeEntry from '../common/timesheet/TimeEntry';
+import TimeSheetTable from '../common/timesheet/TimeSheetTable';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import SelectInput from '../common/SelectInput';
-import { taskType, taskNames } from "../Constants";
+import SelectInput from '../SelectInput';
+import { taskType, taskNames } from "../../Constants";
 
 const initialSelection = {
     date: '',

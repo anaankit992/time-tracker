@@ -1,5 +1,5 @@
 import React from 'react';
-import { reportLabels } from "../Constants";
+import { reportLabels } from "../../Constants";
 
 function ReportsTable(props) {
     const { submitData, selectedDate } = props;

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import SelectInput from '../common/SelectInput';
-import ReportsTable from '../common/ReportsTable';
-import {users} from "../Constants";
+import ApprovalTable from './ApprovalTable';
 
-function ReportsEntry({ submitData }) {
+function ApprovalEntry({ submitData }) {
 
     const [selectedDate, setSelectedDate] = useState("");
     const handleDateSelect = e => {
         setSelectedDate(e.target.value)
     }
+
     return (
         <>
             <div className="col-md-12 section_data">
@@ -17,15 +16,13 @@ function ReportsEntry({ submitData }) {
                         <label for="date">Select Date </label>
                         <input onChange={handleDateSelect} type="date" className="form-control inputType" id="data"></input>
                     </div>
-                    <div className="col-sm-4 user-name left">
-                        <label for="task">User Name</label>
-                        <SelectInput isDisabled={true} placeholder=" Disabled for now" options={users} handleChange={e => { console.log(e) }} />
-                    </div>
+                    <button className="btn btn-primary ">Show</button>
                 </div>
             </div>
-            <ReportsTable selectedDate={selectedDate} submitData={submitData} />
+            <ApprovalTable />
         </>
     )
+
 }
 
-export default ReportsEntry;
+export default ApprovalEntry;
