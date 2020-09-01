@@ -1,33 +1,35 @@
 import React from 'react';
 
-function LeftSide({ history }) {
+function LeftSide({ urlParams, location, history }) {
+    debugger;
     return (
         <div className="left-side">
             <ul>
-                <li className={history.location.pathname === "/dashboard" && "active"} onClick={() => history.push("/dashboard")}>
+                <li className={history.location.pathname === "/dashboard" && "active"} onClick={() => history.push(`/dashboard${location.search}`)}>
                     <a href="javascript:void(0)">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li className={history.location.pathname === "/timeSheet" && "active"} onClick={() => history.push("/timeSheet")}>
+                <li className={history.location.pathname === "/timeSheet" && "active"} onClick={() => history.push(`/timeSheet${location.search}`)}>
                     <a href="javascript:void(0)">
                         <i class="fa fa-clock"></i>
                         <span>Timesheets</span>
                     </a>
                 </li>
-                <li className={history.location.pathname === "/reports" && "active"} onClick={() => history.push("/reports")}>
+                <li className={history.location.pathname === "/reports" && "active"} onClick={() => history.push(`/reports${location.search}`)}>
                     <a href="javascript:void(0)">
                         <i class="fa fa-files-o"></i>
                         <span>Reports</span>
                     </a>
                 </li>
-                <li className={history.location.pathname === "/approvals" && "active"} onClick={() => history.push("/approvals")}>
+                {urlParams && urlParams.user === "admin" ? <li className={history.location.pathname === "/approvals" && "active"} onClick={() => history.push(`/approvals${location.search}`)}>
                     <a href="javascript:void(0)">
                         <i class="fa fa-check"></i>
                         <span>Approvals</span>
                     </a>
-                </li>
+                </li>:null}
+
 
             </ul>
         </div>

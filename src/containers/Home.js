@@ -7,21 +7,21 @@ import TimeSheet from '../components/TimeSheet';
 import Reports from '../components/Reports';
 import Approvals from '../components/Approvals';
 import { userDataSet } from "../Constants";
+import qs from 'query-string'
 
 function Home(props) {
   const [entries, setEntries] = useState([]);
   const [submitData, setSubmitData] = useState(userDataSet)
-
+  const urlParams = qs.parse(props.location.search);
   const { history } = props
   const pathName = history.location.pathname;
-
   return (
     <div className="home-container">
       <Navbar />
       <div className="main-page">
-        <LeftSide history={history} />
+        <LeftSide urlParams={urlParams} location={props.location} history={history} />
 
-        {pathName === "/dashboard" &&
+        {(pathName === "/dashboard"  || pathName === "/" ) &&
           <Dashboard history={history} />
 
         }
@@ -36,11 +36,12 @@ function Home(props) {
           <Reports
             submitData={submitData}
             setSubmitData={setSubmitData}
-            history={history} />
+            history={history}
+            urlParams={urlParams} />
+
         }
         {pathName === "/approvals" &&
-          <Approvals history={history} />
-
+          < Approvals history={history} />
         }
       </div>
     </div>

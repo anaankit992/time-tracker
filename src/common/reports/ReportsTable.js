@@ -4,7 +4,6 @@ import { reportLabels } from "../../Constants";
 function ReportsTable(props) {
     const { submitData, selectedDate, selectedName } = props;
 
-    debugger;
     return (
         <div className="display_area_reports col-md-11">
             <div className="section-body">

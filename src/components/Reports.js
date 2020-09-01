@@ -3,7 +3,7 @@ import ReportsEntry from '../common/reports/ReportsEntry';
 
 
 function Reports(props) {
-    const {submitData,setSubmitData } = props;
+    const { submitData, urlParams } = props;
     console.log(submitData);
     return (
         <div id="main" className="reports-wrapper">
@@ -14,7 +14,7 @@ function Reports(props) {
                             <TimeHeader />
                             <div className="section_main white-bg">
                                 {/* Time Entry Section */}
-                                <ReportsEntry submitData={submitData} />
+                                <ReportsEntry urlParams={urlParams} submitData={submitData} />
                                 {/*Time Sheet Entry  */}
                                 <button className="btn btn-primary ">Export</button>
                             </div>
