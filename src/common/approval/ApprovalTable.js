@@ -1,7 +1,6 @@
 import React from 'react';
-import { reportLabels } from "../../Constants";
 
-function ApprovalTable(props) {
+function ApprovalTable() {
 
     return (
         <div className="display_area_reports col-md-11">
@@ -11,21 +10,32 @@ function ApprovalTable(props) {
                     <table className="table table-striped">
                         <thead >
                             <tr className="table-headings">
-                                {/* {organizeData().length ? (
-                                    organizeData().map(sel => (
-                                        <th key={sel.taskName}>{sel.taskName}</th>
-                                    ))
-                                ) : null} */}
-
-                                {reportLabels.map(label => (
-                                    <th key={label}>{label}</th>
-                                ))}
+                                <td>Name</td>
+                                <td>Task Name</td>
+                                <td>Task Name</td>
+                                <td>Task Name</td>
+                                <td>Task Name</td>
+                                <td>Task Name</td>
+                                <td>Task Name</td>
+                                <td>Task Name</td>
+                                <td>Task Name</td>
+                                <td>Task Name</td>
                             </tr>
 
                         </thead>
                         <tbody>
-
-
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
