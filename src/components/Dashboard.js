@@ -31,7 +31,7 @@ function Dashboard() {
                     <div class="chart-card">
                         {/* heading */}
                         <div className="heading">
-                            <h5>Your Times this week</h5>
+                            <h5>Your % of Times this week</h5>
                         </div>
                         {/* body */}
                         <div className="body">

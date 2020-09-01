@@ -9,7 +9,7 @@ function ReportsEntry({ submitData, urlParams }) {
     const handleDateSelect = e => {
         setSelectedDate(e.target.value)
     }
-    const [name, setName] = useState({});
+    const [name, setName] = useState(users[0]);
 
     const handleNameSelect = opt => {
         setName(opt)
@@ -24,7 +24,7 @@ function ReportsEntry({ submitData, urlParams }) {
                     </div>
                     {urlParams && urlParams.user === "admin" && <div className="col-sm-4 user-name left">
                         <label for="task">User Name</label>
-                        <SelectInput isDisabled={!selectedDate} value={name} options={users} onChange={e => handleNameSelect(e)} />
+                        <SelectInput  value={name} options={users} onChange={e => handleNameSelect(e)} />
                     </div>}
 
                 </div>

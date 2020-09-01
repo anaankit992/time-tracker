@@ -4,7 +4,6 @@ import ReportsEntry from '../common/reports/ReportsEntry';
 
 function Reports(props) {
     const { submitData, urlParams } = props;
-    console.log(submitData);
     return (
         <div id="main" className="reports-wrapper">
             <main className="col-sm-10 no_padding">

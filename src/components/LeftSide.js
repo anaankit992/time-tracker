@@ -1,7 +1,6 @@
 import React from 'react';
 
 function LeftSide({ urlParams, location, history }) {
-    debugger;
     return (
         <div className="left-side">
             <ul>
