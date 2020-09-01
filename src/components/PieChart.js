@@ -7,7 +7,7 @@ function PieChart() {
     return (
         <Chart
             // width={'350px'}
-            // height={'300px'}
+            // height={'230px'}
             chartType="PieChart"
             loader={<div>Loading Chart</div>}
             data={[
@@ -20,10 +20,11 @@ function PieChart() {
             options={{
                 // Just add this option
                 is3D: true,
-                // legend: "none"
-
+                chartArea: { 'width': '80%', 'height': '80%' },
+                legend: { 'position': 'bottom' },
+                legend: { 'position': 'bottom' }
             }}
-            // rootProps={{ 'data-testid': '2' }}
+        rootProps={{ 'data-testid': '2' }}
         />
     )
 }

@@ -5,8 +5,8 @@ function LineChart() {
 
     return (
         <Chart
-            width={"100%"}
-            height={'100%'}
+            // width={"500px"}
+            // height={'230px'}     
             chartType="LineChart"
             loader={<div>Loading Chart</div>}
             data={[
@@ -19,6 +19,13 @@ function LineChart() {
 
             ]}
 
+            options={{
+                // Just add this option
+                is3D: true,
+                chartArea: { 'width': '90%', 'height': '80%' },
+
+
+            }}
             rootProps={{ 'data-testid': '1' }}
 
         />
