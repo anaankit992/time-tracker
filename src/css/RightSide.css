@@ -109,7 +109,9 @@ text {
   font-weight: normal;
   text-align: left;
 }
-.logs {
+
+
+/* .logs {
   padding:10px
 }
 .log-entry {
@@ -118,4 +120,4 @@ text {
   color:#FF7920;
   cursor: pointer;
   margin-top:10px;
-}
+} */

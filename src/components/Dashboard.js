@@ -1,5 +1,6 @@
 import React from 'react';
 import LineChart from './LineChart';
+import PieChart from './PieChart';
 
 function Dashboard() {
     return (
@@ -39,22 +40,7 @@ function Dashboard() {
                                 We will Probably Display a line chart here
                 </div> */}
 
-                            <div className="logs">
-                                <div className="log-entry">
-                                   Monday 17/8 - 8Hrs
-                                </div>
-                                <div className="log-entry">
-                                Monday 17/8 - 8Hrs
-                                </div>    <div className="log-entry">
-                                Monday  17/8 - 8Hrs
-                                </div>
-                                <div className="log-entry">
-                                Monday 17/8 - 8Hrs
-                                </div>
-                                 <div className="log-entry">
-                                 Monday  17/8 - 8Hrs
-                                </div>
-                            </div>
+                           <PieChart />
                         </div>
                     </div>
 
