@@ -1,0 +1,16 @@
+.approval-table-headings th {
+  font-size: 13px;
+  font-weight: 500;
+  color: #686b6d;
+  white-space: nowrap;
+}
+
+.display_area_approval {
+  margin: 50px 0 0 18px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.approval-section-body {
+  padding: 1.25rem;
+}

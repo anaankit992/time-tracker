@@ -79,14 +79,14 @@ function TimeEntry(props) {
                 </div>
                 <div className="col-sm-5 left">
                     <label>Task Type</label>
-                    <SelectInput onChange={e => handleSelect(e, "taskType")} value={{ label: selections.taskType, value: selections.taskType }} isDisabled={!selections.date} options={taskType} handleChange={e => { console.log(e) }} />
+                    <SelectInput onChange={e => handleSelect(e, "taskType")} value={{ label: selections.taskType, value: selections.taskType }} isDisabled={!selections.date} options={taskType}  />
                 </div>
 
             </div>
             <div className="section_row">
                 <div className="col-sm-5 left">
                     <label>Task Name</label>
-                    <SelectInput onChange={e => handleSelect(e, "taskName")} value={{ label: selections.taskName, value: selections.taskName }} isDisabled={!selections.taskType} options={taskNames[selections.taskType]} handleChange={e => { console.log(e) }} />
+                    <SelectInput onChange={e => handleSelect(e, "taskName")} value={{ label: selections.taskName, value: selections.taskName }} isDisabled={!selections.taskType} options={taskNames[selections.taskType]} />
                 </div>
                 <div className="col-sm-5 left">
                     <label>No of Hrs </label>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ApprovalTable from './ApprovalTable';
 
-function ApprovalEntry({ submitData }) {
+function ApprovalEntry(props) {
 
     const [selectedDate, setSelectedDate] = useState("");
     const handleDateSelect = e => {
@@ -16,7 +16,7 @@ function ApprovalEntry({ submitData }) {
                         <label for="date">Select Date </label>
                         <input onChange={handleDateSelect} type="date" className="form-control inputType" id="data"></input>
                     </div>
-                    <button className="btn btn-primary ">Show</button>
+                    {/* <button className="btn btn-primary ">Show</button> */}
                 </div>
             </div>
             <ApprovalTable />

@@ -62,17 +62,18 @@ export const taskNames = {
 
 export const users = [
     { label: "Ankit", value: "ankit" },
-    { label: "Lakshmi", value: "Lakshmi" },
-    { label: "Bindo", value: "Bindo" },
-    { label: "Astha", value: "Astha" },
+    { label: "Lakshmi", value: "lakshmi" },
+    { label: "Bindo", value: "bindo" },
+    { label: "Astha", value: "astha" },
 ]
 
 
 
 export const userDataSet = {
     ankit: {
-        "08/12/2020": [
+        "2020-09-01": [
             {
+                date: "2020-09-01",
                 taskType: "Daily Standups",
                 taskName: "Task assignment Standup",
                 hrs: "0.5",
@@ -82,6 +83,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Software development",
                 taskName: "UI/Article Development",
                 hrs: "3",
@@ -91,6 +94,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Software development",
                 taskName: "Pre & Post processor Tool testing / Rule Validation",
                 hrs: "4",
@@ -100,6 +105,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Trainings/Conference",
                 taskName: "Leadership Web Series",
                 hrs: "0.5",
@@ -110,9 +117,11 @@ export const userDataSet = {
             }
         ]
     },
-    astha: {
-        "08/21/2020": [
+    lakshmi: {
+        "2020-09-01": [
             {
+                date: "2020-09-01",
+
                 taskType: "Daily Standups",
                 taskName: "Task assignment Standup",
                 hrs: "0.5",
@@ -122,6 +131,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Daily Standups",
                 taskName: "Retrospective meeting",
                 hrs: "1",
@@ -131,6 +142,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Software development",
                 taskName: "UI/Article Development",
                 hrs: "4",
@@ -140,6 +153,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Software development",
                 taskName: "POC/ internal Projects development",
                 hrs: "4",
@@ -149,6 +164,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Knowledge transfer",
                 taskName: "Project related meeting",
                 hrs: "1",
@@ -159,9 +176,11 @@ export const userDataSet = {
             }
         ]
     },
-    binod: {
-        "08/20/2020": [
+    bindo: {
+        "2020-09-01": [
             {
+                date: "2020-09-01",
+
                 taskType: "Daily Standups",
                 taskName: "Task assignment Standup",
                 hrs: "0.5",
@@ -171,6 +190,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Software development",
                 taskName: "UI/Article Development",
                 hrs: "4.5",
@@ -180,6 +201,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Software development",
                 taskName: "Self Review",
                 hrs: "2",
@@ -189,6 +212,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Trainings/Conference",
                 taskName: "Leadership Web Series",
                 hrs: "2",
@@ -199,9 +224,11 @@ export const userDataSet = {
             }
         ]
     },
-    samiksha: {
-        "08/12/2020": [
+    astha: {
+        "2020-09-01": [
             {
+                date: "2020-09-01",
+
                 taskType: "Daily Standups",
                 taskName: "Task assignment Standup",
                 hrs: "1",
@@ -211,6 +238,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Software development",
                 taskName: "UI/Article Development",
                 hrs: "6.5",
@@ -220,6 +249,8 @@ export const userDataSet = {
                 remarks: "-"
             },
             {
+                date: "2020-09-01",
+
                 taskType: "Software development",
                 taskName: "Self Review",
                 hrs: "1",

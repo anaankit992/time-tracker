@@ -11,9 +11,13 @@ function TimeSheet(props) {
     const handleSubmit = () => {
         setSubmitData({
             ...submitData,
-            [entries[0].date]: [
-                ...entries
-            ]
+            "ankit": {
+                ...submitData['ankit'],
+                [entries[0].date]: [
+                    ...entries
+                ]
+            }
+
         })
         setEntries([])
         toast.success(`Time Entries for the day ${[entries[0].date]} have been submitted successfully`);

@@ -3,23 +3,24 @@ import React from 'react';
 function ApprovalTable() {
 
     return (
-        <div className="display_area_reports col-md-11">
-            <div className="section-body">
+        <div className="display_area_approval col-md-11">
+            <div className="approval-section-body">
                 <h5 className="head5 card-title">Entries</h5>
                 <div className="table_reports">
                     <table className="table table-striped">
                         <thead >
-                            <tr className="table-headings">
-                                <td>Name</td>
-                                <td>Task Name</td>
-                                <td>Task Name</td>
-                                <td>Task Name</td>
-                                <td>Task Name</td>
-                                <td>Task Name</td>
-                                <td>Task Name</td>
-                                <td>Task Name</td>
-                                <td>Task Name</td>
-                                <td>Task Name</td>
+                            <tr className="approval-table-headings">
+                                <th>Name</th>
+                                <th>Task Name</th>
+                                <th>Task Name</th>
+                                <th>Task Name</th>
+                                <th>Task Name</th>
+                                <th>Task Name</th>
+                                <th>Task Name</th>
+                                <th>Task Name</th>
+                                <th>Task Name</th>
+                                <th>Task Name</th>
+
                             </tr>
 
                         </thead>

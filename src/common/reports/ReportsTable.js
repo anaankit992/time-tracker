@@ -2,21 +2,9 @@ import React from 'react';
 import { reportLabels } from "../../Constants";
 
 function ReportsTable(props) {
-    const { submitData, selectedDate } = props;
+    const { submitData, selectedDate, selectedName } = props;
 
-    const organizeData = () => {
-        const temp = []
-        if (selectedDate && submitData[selectedDate]) {
-            submitData[selectedDate].map(sel => {
-                temp.push({
-                    taskName: sel.taskName,
-                    hrs: sel.hrs
-                })
-            })
-        }
-        return temp;
-    }
-
+    debugger;
     return (
         <div className="display_area_reports col-md-11">
             <div className="section-body">
@@ -38,8 +26,8 @@ function ReportsTable(props) {
 
                         </thead>
                         <tbody>
-                            {selectedDate && submitData[selectedDate] ? (
-                                submitData[selectedDate].map((sel, i) => {
+                            {selectedDate && selectedName && submitData[selectedName][selectedDate] ? (
+                                submitData[selectedName][selectedDate].map((sel, i) => {
                                     return (
                                         (
                                             <tr key={`${sel.taskName} ${sel.hrs}`}>
