@@ -22,7 +22,7 @@ function LineChart() {
             options={{
                 // Just add this option
                 is3D: true,
-                chartArea: { 'width': '90%', 'height': '80%' },
+                chartArea: { 'width': '85%', 'height': '80%' },
 
 
             }}
