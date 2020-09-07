@@ -17,7 +17,7 @@ console.log(props);
   useEffect(() => {
     props.dashboardActions.getUserDetails();
   }, [])
-
+console.log(props);
   const [entries, setEntries] = useState([]);
   const [submitData, setSubmitData] = useState(userDataSet)
   const urlParams = qs.parse(props.location.search);

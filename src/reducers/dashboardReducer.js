@@ -1,4 +1,4 @@
-
+import * as constants from "../apiConstants/dashboardConstants";
 
 const dashboardInitialState = {
     user: {}
@@ -6,7 +6,7 @@ const dashboardInitialState = {
 
 export default (state = dashboardInitialState, action) => {
     switch (action.type) {
-        case 'GET_USER_DETAILS':
+        case constants.GET_USER_DETAILS_SUCCESS:
             return {
                 ...state,
                 user: action.payload
