@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import LeftSide from '../components/LeftSide';
 import Dashboard from '../components/Dashboard';
@@ -8,8 +8,16 @@ import Reports from '../components/Reports';
 import Approvals from '../components/Approvals';
 import { userDataSet } from "../Constants";
 import qs from 'query-string'
+import { connect } from 'react-redux';
+import * as dashboardActions from "../actions/dashboardActions";
 
 function Home(props) {
+
+console.log(props);
+  useEffect(() => {
+    props.dashboardActions.getUserDetails();
+  }, [])
+
   const [entries, setEntries] = useState([]);
   const [submitData, setSubmitData] = useState(userDataSet)
   const urlParams = qs.parse(props.location.search);
@@ -21,7 +29,7 @@ function Home(props) {
       <div className="main-page">
         <LeftSide urlParams={urlParams} location={props.location} history={history} />
 
-        {(pathName === "/dashboard"  || pathName === "/" ) &&
+        {(pathName === "/dashboard" || pathName === "/") &&
           <Dashboard history={history} />
 
         }
@@ -48,4 +56,16 @@ function Home(props) {
   )
 }
 
-export default withRouter(Home);
+
+const mapStateToProps = state => (
+  {
+    ...state
+  }
+)
+const mapDispatchToProps = dispatch => ({
+  dashboardActions: {
+    getUserDetails: () => dispatch(dashboardActions.getUserDetails())
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Home));

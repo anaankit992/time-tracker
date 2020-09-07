@@ -12,9 +12,7 @@ function App() {
   return (
     <Router >
       <Switch>
-        <Route path="/">
-          <Home  history={history} />
-        </Route>
+        <Route path="/" history={history} component={Home} />
       </Switch>
     </Router>
   );
