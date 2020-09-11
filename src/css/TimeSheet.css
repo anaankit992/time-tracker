@@ -153,6 +153,19 @@ h5.head5 {
 }
 
 
-.time-sheet-date input{
-  height: 37px;
+.time-sheet-date .DateRangePicker{
+  width: 252px;
+}
+
+.time-sheet-date .DateRangePicker input {
+  font-size: 13px;
+  
+}
+
+
+.time-sheet-date .DateRangePicker svg{
+  height: 20px;
+  width: 20px;
+  margin: 0px;
+  display: block;
 }

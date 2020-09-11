@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import SelectInput from '../SelectInput';
 import { taskType, taskNames } from "../../Constants";
+import "react-dates/initialize";
+import { DateRangePicker } from "react-dates";
+import "react-dates/lib/css/_datepicker.css";
+import moment from "moment"
 
 const initialSelection = {
     date: '',
@@ -15,6 +19,17 @@ const initialSelection = {
 
 function TimeEntry(props) {
 
+    const [startDate, setStartDate] = useState(moment());
+    const [endDate, setEndDate] = useState(moment().add(7, 'd'));
+    const [focusedInput, setFocusedInput] = useState(null);
+
+    function onDateChange(dates) {
+        setStartDate(dates.startDate);
+        setEndDate(dates.endDate);
+    }
+    function onFocusChange(focusedInput) {
+        setFocusedInput(focusedInput);
+    }
     const { entries, setEntries } = props;
     const [selections, setSelections] = useState(initialSelection);
 
@@ -75,11 +90,20 @@ function TimeEntry(props) {
             <div className="section_row">
                 <div className="col-sm-5 left time-sheet-date">
                     <label >Select Date </label>
-                    <input onChange={handleDateSelect} type="date" value={selections.date} className="form-control inputType"></input>
+                    <DateRangePicker
+                        startDate={startDate}
+                        startDateId="your_unique_start_date_id"
+                        endDate={endDate}
+                        endDateId="your_unique_end_date_id"
+                        onDatesChange={onDateChange}
+                        focusedInput={focusedInput}
+                        onFocusChange={onFocusChange}
+                    />
+                    {/* <input onChange={handleDateSelect} type="date" value={selections.date} className="form-control inputType"></input> */}
                 </div>
                 <div className="col-sm-5 left">
                     <label>Task Type</label>
-                    <SelectInput onChange={e => handleSelect(e, "taskType")} value={{ label: selections.taskType, value: selections.taskType }} isDisabled={!selections.date} options={taskType}  />
+                    <SelectInput onChange={e => handleSelect(e, "taskType")} value={{ label: selections.taskType, value: selections.taskType }} isDisabled={!selections.date} options={taskType} />
                 </div>
 
             </div>

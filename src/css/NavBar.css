@@ -29,15 +29,11 @@
 }
 
 ul .team-name {
-    margin-top: 12.5px;
-    margin-left: 30px;
-    font-weight: 600;
-    border: 1px solid #9b9b9b;
-    color: #676a6c;
-    border-radius: 3px;
-    padding: 3px 10px 3px 10px;
-    cursor: pointer;
-
+    height: 10px;
+    width: 170px;
+    margin-left: 20px;
+    padding:7px;
+    font-size:13px;
 }
 
 .main-nav li:last-child {
